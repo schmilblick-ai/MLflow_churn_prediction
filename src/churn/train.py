@@ -33,7 +33,8 @@ def train():
     
     # Enable Autologging
     # This captures params, metrics, model artifacts, and system metrics automatically
-    mlflow.sklearn.autolog(log_input_examples=True, log_model_signatures=True, silent=True)
+    mlflow.sklearn.autolog(log_input_examples=True, log_model_signatures=True, silent=True,)
+    #registered_model_name=None ) # ← désactive l'auto-registration
 
     with mlflow.start_run(run_name="Model_Training"):
         print("Starting training run...")
