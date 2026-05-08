@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/a081220cb43f42428b3a8a4e8971f819/artifacts
+end_time: 1777943461363
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: a081220cb43f42428b3a8a4e8971f819
+run_name: adventurous-eel-249
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777943451385
+status: 3
+tags: []
+user_id: ubuntu

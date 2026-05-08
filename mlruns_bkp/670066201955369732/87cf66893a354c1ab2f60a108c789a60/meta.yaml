@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/87cf66893a354c1ab2f60a108c789a60/artifacts
+end_time: 1777934899000
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 87cf66893a354c1ab2f60a108c789a60
+run_name: overjoyed-goat-396
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777934889634
+status: 4
+tags: []
+user_id: ubuntu

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/d6bf764c7b6042cc8de131bb74adce11/artifacts
+end_time: 1777930650637
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: d6bf764c7b6042cc8de131bb74adce11
+run_name: ambitious-deer-958
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777930640677
+status: 4
+tags: []
+user_id: ubuntu

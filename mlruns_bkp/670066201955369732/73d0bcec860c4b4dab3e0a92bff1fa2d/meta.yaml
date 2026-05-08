@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/73d0bcec860c4b4dab3e0a92bff1fa2d/artifacts
+end_time: 1777967327814
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 73d0bcec860c4b4dab3e0a92bff1fa2d
+run_name: suave-midge-795
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777967318475
+status: 3
+tags: []
+user_id: ubuntu

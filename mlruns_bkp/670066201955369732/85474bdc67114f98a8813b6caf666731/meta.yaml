@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/85474bdc67114f98a8813b6caf666731/artifacts
+end_time: 1777943479927
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 85474bdc67114f98a8813b6caf666731
+run_name: industrious-gnu-488
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777943470073
+status: 3
+tags: []
+user_id: ubuntu

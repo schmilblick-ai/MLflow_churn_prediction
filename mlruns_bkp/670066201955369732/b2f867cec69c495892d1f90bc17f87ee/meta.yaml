@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/b2f867cec69c495892d1f90bc17f87ee/artifacts
+end_time: 1777938032898
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: b2f867cec69c495892d1f90bc17f87ee
+run_name: fearless-toad-298
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777938021104
+status: 3
+tags: []
+user_id: ubuntu

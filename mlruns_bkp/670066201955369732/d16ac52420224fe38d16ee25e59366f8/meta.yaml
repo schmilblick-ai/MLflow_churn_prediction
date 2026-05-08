@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/d16ac52420224fe38d16ee25e59366f8/artifacts
+end_time: 1777930324229
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: d16ac52420224fe38d16ee25e59366f8
+run_name: amusing-gnat-428
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777930322824
+status: 4
+tags: []
+user_id: ubuntu

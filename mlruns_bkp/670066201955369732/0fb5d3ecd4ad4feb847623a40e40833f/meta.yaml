@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/0fb5d3ecd4ad4feb847623a40e40833f/artifacts
+end_time: 1777934914300
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 0fb5d3ecd4ad4feb847623a40e40833f
+run_name: gifted-perch-972
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777934904445
+status: 4
+tags: []
+user_id: ubuntu

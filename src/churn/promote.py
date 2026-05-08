@@ -13,6 +13,7 @@ from mlflow.tracking import MlflowClient
 import subprocess
 import logging
 import warnings
+from datetime import datetime
 
 # --- Setup Logging ---
 logging.getLogger("mlflow").setLevel(logging.ERROR)
@@ -30,26 +31,35 @@ def get_staging_model_version(client):
     versions = client.search_model_versions(f"name='{MODEL_NAME}'")
     staging_versions = [v for v in versions if v.current_stage == "Staging"]
     if not staging_versions:
+        print(f"No versions of model '{MODEL_NAME}' found in Staging.")
         return None
     # Return the most recent staging version
     return max(staging_versions, key=lambda v: int(v.version))
 
 
-def get_evaluation_metrics(run_id):
+def get_evaluation_metrics(run_id,client):
     """Retrieve F1 score from the evaluation run associated with a model."""
     # Search for evaluation runs that evaluated this model
     # Insert your code here
     ###added
-    eval_runs= mlflow.search_runs(
-        experiment_names=[EXPERIMENT_NAME],
-        filter_string=f"tags.mlflow.runName = 'Model_Evaluation' and tags.model_run_id = '{run_id}'",
-        #filter_string=f"tags.model_run_id = '{run_id}'",
-        order_by=["start_time DESC"],
-        max_results=1
-    )
-    ###
-    f1 = eval_runs.iloc[0].get("metrics.f1_score")
-    accuracy = eval_runs.iloc[0].get("metrics.accuracy_score")
+    #run = client.get_run(run_id) NON ON AURA QUE LES METRICS DE TRAINING PAS DE L'EVALUATION, IL FAUT CHERCHER LE RUN D'EVALUATION QUI A EVALUÉ CE MODEL
+    #mlflow.set_tag("model_run_id", latest_run_id) on tagera dans l'evaluate.py le run d'évaluation avec le run d'entraînement pour faire le lien entre les deux
+    #QUEL BRICOLAGE
+    if True:    
+        eval_runs= mlflow.search_runs(
+            experiment_names=[EXPERIMENT_NAME],
+            filter_string=f"tags.mlflow.runName = 'Model_Evaluation' and tags.model_run_id = '{run_id}'",
+            order_by=["start_time DESC"],
+            max_results=1
+        )
+    
+        eval_runs = eval_runs[eval_runs["status"] == "FINISHED"]
+        if eval_runs.empty:
+            return None 
+        ###
+        f1 = eval_runs.iloc[0].get("metrics.f1_score")
+        accuracy = eval_runs.iloc[0].get("metrics.accuracy_score")
+    
     return {"f1_score": f1, "accuracy_score": accuracy}
 
 
@@ -81,7 +91,7 @@ def promote():
     print(f"  Source Run: {staging_version.run_id}")
 
     # 2. Check evaluation metrics
-    metrics = get_evaluation_metrics(staging_version.run_id)
+    metrics = get_evaluation_metrics(staging_version.run_id,client)
     if metrics is None:
         print("No evaluation metrics found. Run evaluate.py first.")
         return
@@ -115,8 +125,28 @@ def promote():
 
         
         print(f"Model version {staging_version.version} is now in Production!")
+
+
+        # Écrire la raison de la promotion
+        client.update_model_version(
+            name=MODEL_NAME,
+            version=staging_version.version,
+            description=(
+                f"🎉 Promoted to Production | "
+                f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')} | "
+                f"f1_score={f1:.4f} | "
+                f"accuracy={accuracy:.4f} | "
+                f"run_id={staging_version.run_id}"
+            )
+        )
+
     else:
         print(f"\n F1 score ({f1:.4f}) < threshold ({F1_THRESHOLD}). NOT promoting.")
+        client.update_model_version(
+            name=MODEL_NAME,
+            version=staging_version.version,
+            description=(f"F1 score ({f1:.4f}) < threshold ({F1_THRESHOLD}). NOT promoting.")
+        )
         print("   Improve your model or lower the threshold.")
 
 

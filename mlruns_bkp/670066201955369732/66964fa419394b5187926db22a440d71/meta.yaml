@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/66964fa419394b5187926db22a440d71/artifacts
+end_time: 1777931409629
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 66964fa419394b5187926db22a440d71
+run_name: debonair-chimp-754
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777931399700
+status: 4
+tags: []
+user_id: ubuntu

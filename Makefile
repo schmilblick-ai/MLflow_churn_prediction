@@ -76,3 +76,6 @@ build-model-image-sqlite:
 
 sqlite-clean-workflow:
 	make mlflow-sqlite-build-image && make mlflow-sqlite-up && make build-project-image && make workflow-sqlite
+
+testenv:
+	env -u MLFLOW_TRACKING_URI -u MLFLOW_REGISTRY_URI PYTHONWARNINGS=$(PY_WARNINGS) MLFLOW_TRACKING_URI=$(MLFLOW_FILE_URI) MLFLOW_REGISTRY_URI=$(MLFLOW_FILE_URI) MLFLOW_EXPERIMENT_NAME=$(MLFLOW_EXPERIMENT_NAME) bash -c 'set; echo $$'

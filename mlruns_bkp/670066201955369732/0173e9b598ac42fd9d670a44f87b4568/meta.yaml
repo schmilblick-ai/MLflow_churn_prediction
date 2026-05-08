@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/0173e9b598ac42fd9d670a44f87b4568/artifacts
+end_time: 1777930194798
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 0173e9b598ac42fd9d670a44f87b4568
+run_name: dazzling-hawk-342
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777930193422
+status: 4
+tags: []
+user_id: ubuntu

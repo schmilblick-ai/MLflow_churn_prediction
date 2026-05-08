@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/22834e29e29842258d72143422b11221/artifacts
+end_time: 1777938172787
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 22834e29e29842258d72143422b11221
+run_name: painted-skunk-274
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777938162908
+status: 3
+tags: []
+user_id: ubuntu

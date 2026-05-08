@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/1ccd770baaff40e88840fc020b0c8ec6/artifacts
+end_time: 1777929318374
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 1ccd770baaff40e88840fc020b0c8ec6
+run_name: sneaky-doe-76
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777929316953
+status: 4
+tags: []
+user_id: ubuntu

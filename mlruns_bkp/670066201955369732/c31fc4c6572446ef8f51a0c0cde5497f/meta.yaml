@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/c31fc4c6572446ef8f51a0c0cde5497f/artifacts
+end_time: 1777980244623
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: c31fc4c6572446ef8f51a0c0cde5497f
+run_name: Model_Training
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777980217213
+status: 4
+tags: []
+user_id: ubuntu

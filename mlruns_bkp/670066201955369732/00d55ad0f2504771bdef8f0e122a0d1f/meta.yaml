@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/00d55ad0f2504771bdef8f0e122a0d1f/artifacts
+end_time: 1777943632663
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 00d55ad0f2504771bdef8f0e122a0d1f
+run_name: bald-skunk-796
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777943622352
+status: 3
+tags: []
+user_id: ubuntu

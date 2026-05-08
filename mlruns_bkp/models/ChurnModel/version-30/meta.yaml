@@ -1,0 +1,15 @@
+creation_timestamp: 1777980355578
+current_stage: Staging
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1777980355734
+model_id: null
+name: ChurnModel
+run_id: 8195149ba7214512b82c20cf6c7e7975
+run_link: null
+source: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/8195149ba7214512b82c20cf6c7e7975/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/8195149ba7214512b82c20cf6c7e7975/artifacts/model
+user_id: null
+version: 30

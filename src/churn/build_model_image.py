@@ -17,8 +17,8 @@ def _get_stage_model_version(client: MlflowClient):
 
 
 def build_model_image():
-    client = # Insert your code here
-    stage_version = # Insert your code here
+    client = MlflowClient()                            # Inserted my code here
+    stage_version = _get_stage_model_version(client)   # Insert your code here
     
     if not stage_version:
         print(f"No model found in stage '{STAGE}' for '{MODEL_NAME}'.")
@@ -35,7 +35,8 @@ def build_model_image():
     try:
         # Insert your code here
         # MLflow built-in function to generate a Docker image containing the model
-        
+        mlflow.models.build_docker(model_uri=model_uri, name=DOCKER_IMAGE_NAME)
+        #mlflow.models.build_docker(model_uri=model_uri, name=DOCKER_IMAGE_NAME, enable_mlserver=True)
 
 
         print(f"\n✓ SUCCESS: Docker image '{DOCKER_IMAGE_NAME}' built successfully.")

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/fd793ddde7e34bd3863d10ea7c3d6e9a/artifacts
+end_time: 1777930358088
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: fd793ddde7e34bd3863d10ea7c3d6e9a
+run_name: incongruous-boar-405
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777930348028
+status: 4
+tags: []
+user_id: ubuntu

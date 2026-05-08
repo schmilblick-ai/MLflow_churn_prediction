@@ -1,0 +1,33 @@
+digest: 9445f7e6
+name: dataset
+profile: '{"num_rows": 1409, "num_elements": 43679}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "SeniorCitizen", "required":
+  true}, {"type": "long", "name": "tenure", "required": true}, {"type": "double",
+  "name": "MonthlyCharges", "required": true}, {"type": "double", "name": "TotalCharges",
+  "required": true}, {"type": "boolean", "name": "gender_Male", "required": true},
+  {"type": "boolean", "name": "Partner_Yes", "required": true}, {"type": "boolean",
+  "name": "Dependents_Yes", "required": true}, {"type": "boolean", "name": "PhoneService_Yes",
+  "required": true}, {"type": "boolean", "name": "MultipleLines_No phone service",
+  "required": true}, {"type": "boolean", "name": "MultipleLines_Yes", "required":
+  true}, {"type": "boolean", "name": "InternetService_Fiber optic", "required": true},
+  {"type": "boolean", "name": "InternetService_No", "required": true}, {"type": "boolean",
+  "name": "OnlineSecurity_No internet service", "required": true}, {"type": "boolean",
+  "name": "OnlineSecurity_Yes", "required": true}, {"type": "boolean", "name": "OnlineBackup_No
+  internet service", "required": true}, {"type": "boolean", "name": "OnlineBackup_Yes",
+  "required": true}, {"type": "boolean", "name": "DeviceProtection_No internet service",
+  "required": true}, {"type": "boolean", "name": "DeviceProtection_Yes", "required":
+  true}, {"type": "boolean", "name": "TechSupport_No internet service", "required":
+  true}, {"type": "boolean", "name": "TechSupport_Yes", "required": true}, {"type":
+  "boolean", "name": "StreamingTV_No internet service", "required": true}, {"type":
+  "boolean", "name": "StreamingTV_Yes", "required": true}, {"type": "boolean", "name":
+  "StreamingMovies_No internet service", "required": true}, {"type": "boolean", "name":
+  "StreamingMovies_Yes", "required": true}, {"type": "boolean", "name": "Contract_One
+  year", "required": true}, {"type": "boolean", "name": "Contract_Two year", "required":
+  true}, {"type": "boolean", "name": "PaperlessBilling_Yes", "required": true}, {"type":
+  "boolean", "name": "PaymentMethod_Credit card (automatic)", "required": true}, {"type":
+  "boolean", "name": "PaymentMethod_Electronic check", "required": true}, {"type":
+  "boolean", "name": "PaymentMethod_Mailed check", "required": true}, {"type": "long",
+  "name": "Churn", "required": true}]}'
+source: '{"tags": {"mlflow.user": "root", "mlflow.source.name": "src/churn/evaluate.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

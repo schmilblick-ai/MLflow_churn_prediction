@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/fe2c2d777eec44cfa542868daa5f393d/artifacts
+end_time: 1777965397141
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: fe2c2d777eec44cfa542868daa5f393d
+run_name: glamorous-trout-81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777965384681
+status: 3
+tags: []
+user_id: ubuntu

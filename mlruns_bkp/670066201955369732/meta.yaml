@@ -1,0 +1,6 @@
+artifact_location: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732
+creation_time: 1777871012643
+experiment_id: '670066201955369732'
+last_update_time: 1777871012643
+lifecycle_stage: active
+name: Churn_Prediction_Basic

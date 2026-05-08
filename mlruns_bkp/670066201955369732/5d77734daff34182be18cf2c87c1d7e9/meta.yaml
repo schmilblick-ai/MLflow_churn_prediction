@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/5d77734daff34182be18cf2c87c1d7e9/artifacts
+end_time: 1777934794992
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 5d77734daff34182be18cf2c87c1d7e9
+run_name: abundant-shrimp-586
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777934784697
+status: 4
+tags: []
+user_id: ubuntu

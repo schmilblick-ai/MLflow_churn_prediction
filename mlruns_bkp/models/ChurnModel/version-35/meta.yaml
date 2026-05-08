@@ -1,0 +1,16 @@
+creation_timestamp: 1777982711243
+current_stage: Production
+deployment_job_state: null
+description: "\U0001F389 Promoted to Production | Date: 2026-05-05 12:05 | f1_score=0.5931
+  | accuracy=0.8062 | run_id=e00356f8e25540c4a6e8c34a676c83d1"
+last_updated_timestamp: 1777982712716
+model_id: null
+name: ChurnModel
+run_id: e00356f8e25540c4a6e8c34a676c83d1
+run_link: null
+source: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/e00356f8e25540c4a6e8c34a676c83d1/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/e00356f8e25540c4a6e8c34a676c83d1/artifacts/model
+user_id: null
+version: 35

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/54646d509e034e0a8afdfd2cebd40663/artifacts
+end_time: 1777932409146
+entry_point_name: ''
+experiment_id: '670066201955369732'
+lifecycle_stage: active
+run_id: 54646d509e034e0a8afdfd2cebd40663
+run_name: languid-ape-314
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777932399437
+status: 3
+tags: []
+user_id: ubuntu

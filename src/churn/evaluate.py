@@ -33,11 +33,13 @@ def get_latest_run_id():
 def evaluate(model_uri=None):
     # 1. Determine Model URI
     # Priority: Function Arg > Env Var > Latest Run
+    
+    latest_run_id = get_latest_run_id()
+
     if not model_uri:
         model_uri = os.getenv("MLFLOW_MODEL_URI_OVERRIDE")
     
     if not model_uri:
-        latest_run_id = get_latest_run_id()
         if latest_run_id:
             print(f"Auto-detected latest run: {latest_run_id}")
             # Inside Docker (mlflow run), the volume is mounted at /mlflow/tmp/mlruns
@@ -49,7 +51,7 @@ def evaluate(model_uri=None):
         else:
             model_uri = "runs:/<REPLACE_WITH_YOUR_RUN_ID>/model"
 
-    print(f"Loading test data from {DATA_PATH}...")
+    print(f"Loading test data from {DATA_PATH}... and evaluating model: {model_uri}")
     _, X_test, _, y_test = get_train_test_split_data(DATA_PATH)
     
     # Combine for mlflow.evaluate
@@ -62,6 +64,11 @@ def evaluate(model_uri=None):
     mlflow.set_experiment(EXPERIMENT_NAME)
     
     with mlflow.start_run(run_name="Model_Evaluation"):
+        ###add to link the evaluation run with the training run for easier querying later in promote.py
+        
+        mlflow.set_tag("model_run_id", latest_run_id)
+        ###
+
         result = mlflow.evaluate(
             model=model_uri,
             data=eval_data,
@@ -70,6 +77,7 @@ def evaluate(model_uri=None):
             evaluators=["default"],
         )
         
+
         print("\nEvaluation metrics logged to MLflow:")
         # Print a clean subset of metrics
         metrics_to_show = ["accuracy_score", "f1_score", "roc_auc"]

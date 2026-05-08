@@ -1,0 +1,10 @@
+artifact_location: file:///home/ubuntu/MLflow_churn_prediction/mlruns/670066201955369732/models/m-4135255fa0cd4c3a8a10dfde7322a4a8/artifacts
+creation_timestamp: 1777976090084
+experiment_id: '670066201955369732'
+last_updated_timestamp: 1777976094670
+model_id: m-4135255fa0cd4c3a8a10dfde7322a4a8
+model_type: null
+name: model
+source_run_id: fabbf30d285449f2b38571c746aa25d3
+status: 2
+status_message: null

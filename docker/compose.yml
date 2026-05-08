@@ -28,13 +28,35 @@ services:
 
   # ---- Central MLflow Tracking Server ----
   mlflow-server:
-    
+    image: churn-prediction-project-env 
+    container_name : mlflow_server
+    ports : 
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      # Use the same named volume to share artifacts with the server
+      - mlruns_data:/mlruns
+    #API référence https://mlflow.org/docs/latest/api_reference/cli.html  
+    environment : 
+      #env to avoid get-by-name failed with error code 403 != 200 ${MLFLOW_SERVER_ALLOWED_HOSTS} useless has not used
+      #this allowed-hosts will have to be seriously addressed
+      MLFLOW_SERVER_ALLOWED_HOSTS: "*"
+    command: >
+      mlflow server 
+      --host 0.0.0.0 
+      --port 5000 
+      --backend-store-uri postgresql://mlflow:mlflow@postgres/mlflow 
+      --default-artifact-root /mlruns 
+      --allowed-hosts *
+     
   # ---- Pipeline Runner ----
   pipeline-runner:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    image: churn-prediction-env
+    image: churn-prediction-project-env
     container_name: churn_pipeline_runner
     depends_on:
       mlflow-server:
@@ -49,7 +71,28 @@ services:
 
   # ---- Model Server ----
   model-server:
-    
+    image : churn-prediction-project-env
+    container_name : model_server
+    ports : 
+      - "5001:5001"
+    depends_on : 
+      mlflow-server:
+        condition: service_started
+        # Ce service doit attendre que le mlflow-server soit actif avant de tenter de charger le modèle.
+    environment : 
+      # Définissez MLFLOW_TRACKING_URI à http://mlflow-server:5000 pour que le serveur sache où chercher le registre, et MLFLOW_MODEL_URI avec l'URI du modèle à servir.
+       MLFLOW_TRACKING_URI: http://mlflow-server:5000
+    volumes : 
+      # Montez le volume mlruns_data sur /mlruns pour que le service puisse accéder aux artefacts produits par le pipeline.
+      - mlruns_data:/mlruns
+    # La commande doit servir le modèle promu en Production avec les drapeaux expliqués ci-dessus.
+    command : >
+      mlflow models serve
+      --host 0.0.0.0
+      --port 5001
+      --model-uri models:/ChurnModel/Production
+      --no-conda
+
 volumes:
   postgres_data:
   mlruns_data:
